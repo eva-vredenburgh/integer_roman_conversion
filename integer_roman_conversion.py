@@ -24,6 +24,12 @@ print(roman_numerals)
 
 
 def conversion_function(integer):
+
+    if not isinstance(integer, int):
+        raise TypeError
+    if integer <= 0:
+        raise ValueError
+
     roman_string = ""
     for value, symbol in roman_numerals:
         while value <= integer:
